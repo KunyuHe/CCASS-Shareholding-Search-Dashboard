@@ -1,5 +1,5 @@
 """
-Name:    index.py
+Name:    application.py
 Author:  kyh
 Created: 9/15/2022 10:32 PM
 """
@@ -13,6 +13,8 @@ import pages
 from app import app
 from static import CONTENT_STYLE, SIDEBAR_STYLE
 from utils import today
+
+application = app.server
 
 app.layout = html.Div(
     [
@@ -68,4 +70,4 @@ def display_tab_content(active_tab):
 
 
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', port=8050)
+    application.run_server(port=8050, debug=True)
