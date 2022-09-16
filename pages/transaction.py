@@ -8,9 +8,8 @@ import datetime
 import dash
 import dash_bootstrap_components as dbc
 import pandas as pd
-from dash import dcc, html
+from dash import Input, Output, State, dcc, html
 from dash.dash_table.Format import Format, Scheme, Sign
-from dash.dependencies import Input, Output, State
 from dateutil.relativedelta import relativedelta
 
 from app import app, dao
