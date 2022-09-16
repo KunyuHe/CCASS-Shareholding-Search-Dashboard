@@ -60,8 +60,7 @@ app.layout = html.Div(
         )
     ]
 )
-
-dao = ShareHoldingDAO()
+server = app.server
 
 
 @app.callback(Output("card-content", "children"), [Input("tab", "active_tab")])
@@ -73,6 +72,8 @@ def display_tab_content(active_tab):
     else:
         return "404"
 
+
+dao = ShareHoldingDAO()
 
 if __name__ == '__main__':
     app.run_server()
