@@ -7,10 +7,9 @@ import datetime
 
 import dash
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
 import pandas as pd
 import plotly.express as px
+from dash import dcc, html
 from dash.dash_table.Format import Format, Scheme
 from dash.dependencies import Input, Output, State
 from dateutil.relativedelta import relativedelta

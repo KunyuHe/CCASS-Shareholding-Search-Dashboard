@@ -1,11 +1,10 @@
 """
-Name:    application.py
+Name:    index.py
 Author:  kyh
-Created: 9/15/2022 10:32 PM
+Created: 9/16/2022 8:00 PM
 """
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc, html
 from dash.dependencies import Input, Output
 from dateutil.relativedelta import relativedelta
 
@@ -70,4 +69,4 @@ def display_tab_content(active_tab):
 
 
 if __name__ == '__main__':
-    application.run_server(port=8050, debug=True)
+    application.run(port=8050)
