@@ -8,7 +8,6 @@ import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
 from dateutil.relativedelta import relativedelta
 
-import pages
 from data.shareholding import ShareHoldingDAO
 from static import APP_NAME, CONTENT_STYLE, SIDEBAR_STYLE
 from utils import today
@@ -65,6 +64,8 @@ server = app.server
 
 @app.callback(Output("card-content", "children"), [Input("tab", "active_tab")])
 def display_tab_content(active_tab):
+    import pages
+
     if active_tab == "trend":
         return pages.trend.layout()
     elif active_tab == "transactions":
